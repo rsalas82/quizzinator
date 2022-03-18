@@ -1,1 +1,5 @@
-# quizzinator
+# Quizzinator
+
+## Requisites
+
+## How to install
