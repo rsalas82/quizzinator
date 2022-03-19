@@ -1,10 +1,15 @@
 import axios from "axios";
+import quizResponseAdapter from "../adapters/quizResponseAdapter";
 
 export const getQuiz = async(number_questions) => {
     return await axios.get(`https://opentdb.com/api.php?amount=${number_questions}`).then(response => {
-        return response.data.results;
+        const quiz = response.data.results;
+        return quizResponseAdapter(quiz)
+        
     }).catch(err => {
-        console.log(err);
-        return "Error 404 - No se ha podido conectar con el servicio."
+        return {
+            error: 404,
+            message: "The service is not available"
+        }
     })
 }

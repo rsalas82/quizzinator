@@ -7,22 +7,21 @@
   justify-content: center;
   align-items: stretch;
   min-height: 100vh;
-  background-color: darkslategray;
+  background-color: var(--theme-body-bg);
 }
 
 
 .wrapper > header {
   display: flex;
   align-items: center;
-  justify-content: center; 
-  background-color:blanchedalmond;
-  margin: .2rem;
-  border-radius: 15px;
+  justify-content: center;
+  background-color: var(--theme-color_1);
 }
 
 .wrapper > header > h1 {
   font-size: 2rem;
   font-weight: 600;
+  color: var(--theme-body-txt);
 }
 
 .wrapper > main {
@@ -33,7 +32,8 @@
 }
 
 .wrapper > footer {
-  background-color: blanchedalmond;
+  background-color: var(--theme-color_5);
+  color: var(--theme-body-txt);
   flex-grow: auto;
   display: flex;
   justify-content: flex-end;

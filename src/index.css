@@ -1,18 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  font-size: 24px;
+  --fz: 16px;
+  --theme-body-bg: #18061f;
+  --theme-body-txt: #f3f3f3;
+  --theme-color_1: #242582;
+  --theme-color_2: #553D67;
+  --theme-color_3: #F64C72;
+  --theme-color_4: #99738E;
+  --theme-color_5: #2F2FA2;
+  --step-color_correct: #3a8f33;
+  --step-color_not-correct: #8f3933;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Manrope', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: var(--fz);
+  background-color: var(--theme-body-bg);
+  color: var(--theme-body-txt);
 }
 
 code {
@@ -20,12 +37,32 @@ code {
     monospace;
 }
 
-input {
+
+a {
+  color: #09f;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+input, select {
   display: inline-block;
 }
 
 button {
-  background-color: #000;
+  background-color: var(--theme-color_3);
   color: #fff;
   display: inline-block;
+}
+
+input[type='submit'] {
+  background-color: var(--theme-color_3);
+  color: var(--theme-body-txt);
+  border: 1px solid var(--theme-body-txt);
+  border-radius: 5px ;
 }
