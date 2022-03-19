@@ -1,0 +1,45 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+    gap: 2rem
+}
+
+.Home > p {
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 2rem 3rem 0rem;
+}
+
+.Home > p > strong {
+    color: var(--theme-color_3);
+}
+
+.Home > .Home_form > form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1 1 auto;
+    gap: 1rem;
+}
+
+.Home > .Home_form input[type='text'] {
+    border: 1px solid var(--theme-body-txt);
+    border-radius: 5px;
+    font-size: 1.6rem;
+    width: 40vw;
+}
+
+.Home > .Home_form input[type='submit'] {
+    align-self: center;
+    font-size: 1.8rem;
+}
+
+.Home > .Home_form input[type='submit']:hover, 
+.Home > .Home_form input[type='submit']:active {
+    color: var(--theme-color_3);
+    background-color: var(--theme-body-txt);
+    border: 1px solid var(--theme-color_3);
+}
