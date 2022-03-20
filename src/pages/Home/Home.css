@@ -37,9 +37,3 @@
     font-size: 1.8rem;
 }
 
-.Home > .Home_form input[type='submit']:hover, 
-.Home > .Home_form input[type='submit']:active {
-    color: var(--theme-color_3);
-    background-color: var(--theme-body-txt);
-    border: 1px solid var(--theme-color_3);
-}

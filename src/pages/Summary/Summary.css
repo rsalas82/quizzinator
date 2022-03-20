@@ -1,0 +1,36 @@
+.Summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex;
+    padding: 1rem 3rem;
+    gap: 2rem;
+    font-size: calc(var(--fz) * 1.5)
+}
+
+.Summary_grid {  display: grid;
+    grid-area: auto;
+    gap: 1rem;
+    grid-template-areas:
+      ". ."
+      ". ."
+      ". .";
+}
+
+.Summary_grid > * {
+    border: 1px solid var(--theme-color_3);
+    background-color: var(--theme-color_2);
+    padding: .5rem 1rem;
+}
+
+.death {
+    color: crimson;
+}
+
+.retry {
+    color: darkorange;
+}
+
+.live {
+    color: forestgreen;
+}

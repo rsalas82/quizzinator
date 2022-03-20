@@ -1,13 +1,21 @@
+import { useEffect, useContext } from 'react'
+import UserContext from '../../context/UserContext'
 import './QuizProgress.css'
 
-const QuizProgress = ({questions, currentQuestion}) => {
+const QuizProgress = () => {
+    const {user, quiz, setQuiz} = useContext(UserContext)
+
+    useEffect(() => {
+        
+    }, [quiz])
+
     return (
         <div className="QuizProgress">
-            {questions.map((question, index) => {
-                let styleQuestion = currentQuestion === index + 1 ? "question_step active" : "question_step"
+            {quiz.questions.map((question, index) => {
+                let styleQuestion = quiz.currentQuestion === index + 1 ? "question_step active" : "question_step"
                 styleQuestion += getStyleQuestion(question)
                 return (
-                    <div className={styleQuestion}>
+                    <div className={styleQuestion} key={`progress_${index+1}`}>
                         <div className='question_counter'>{index+1}</div>
                     </div>
                 )
