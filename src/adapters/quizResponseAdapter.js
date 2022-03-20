@@ -1,4 +1,4 @@
-import shuffleArray from "../utilities/shuffleArray"
+import shuffleArray from "../utilities/shuffleArray.utility"
 
 const quizResponseAdapter = (quiz) => {
     return {
@@ -12,6 +12,7 @@ const quizResponseAdapter = (quiz) => {
                     question: question.question,
                     options: shuffleArray([...question.incorrect_answers, question.correct_answer]),
                     isCorrect: undefined,
+                    isSaved: false,
                     correctAnswer: question.correct_answer
                 }
             })

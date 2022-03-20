@@ -1,7 +1,7 @@
 .QuizProgress {
     margin-top: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
     gap: 2rem;
   }
@@ -59,17 +59,13 @@
   }
 
   .question_step.not_correct .question_counter{
-    background: var(--step-color_not-correct);
+    background: var(--step-color_wrong);
   }
-  
-  .question_step.correct .question_counter {
-    background-color: #4bb543;
-  }
-  
+    
   .question_step.correct::after {
     position: absolute;
     content: "";
-    border-bottom: 2px solid #4bb543;
+    border-bottom: 2px solid var(--theme-color_4);
     width: 100%;
     top: 20px;
     left: 50%;

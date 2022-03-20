@@ -1,16 +1,25 @@
+import decodeString from "../../utilities/decodeString.utility"
 import RadioOption from "../RadioOption"
 import './Question.css'
 
-const Question = ({type, id, question, correctAnswer, options}) => {
+const Question = ({id, question, correctAnswer, options, disabled, checked, handleChange}) => {
 
     return (
         <div className="Question">
             <div className="Question_question">
-                <strong>{question}</strong>
+                <p>{decodeString(question)}</p>
             </div>
             <div className="Question_answers">
                 {options.map((answer, index) => {
-                    return <RadioOption key={`radio_option_${index}`} id={id} name={`quesiton_${id}`} value={`answer_${index}`} label={answer} />
+                    return <RadioOption 
+                                key={`radio_option_${index}`} 
+                                name={`question_${id}`} 
+                                value={decodeString(answer)} 
+                                label={decodeString(answer)}
+                                correctAnswer={correctAnswer}
+                                disabled={disabled}
+                                checked={checked && checked.value === answer ? true : false}
+                                handleChange={handleChange} />
                 })}
             </div>
         </div>

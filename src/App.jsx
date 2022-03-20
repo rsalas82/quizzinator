@@ -6,6 +6,7 @@ import { Route } from 'wouter'
 import Home from './pages/Home'
 import QuizContext from './context/UserContext'
 import './App.css'
+import Summary from './pages/Summary'
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         <main>
           <Route path='/' component={Home}></Route>
           <Route path='/quiz/:question?' component={Quiz}></Route>
-          <Route path='/summary'></Route>
+          <Route path='/summary' component={Summary}></Route>
         </main>
         <footer><Footer/></footer>
       </div>

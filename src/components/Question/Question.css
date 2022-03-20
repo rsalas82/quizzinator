@@ -1,11 +1,20 @@
 .Question {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: flex-start;
     text-align: left;
 }
 
 .Question_question {
     text-align: left;
+    font-size: calc(var(--fz) * 1.2);
+}
+
+.Question_answers > * {
+    padding: 0.4rem 0;
+}
+
+.Question_answers > * > * {
+    padding-left: .5rem;
 }

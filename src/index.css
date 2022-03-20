@@ -8,7 +8,7 @@
   --theme-color_4: #99738E;
   --theme-color_5: #2F2FA2;
   --step-color_correct: #3a8f33;
-  --step-color_not-correct: #8f3933;
+  --step-color_wrong: #8f3933;
 }
 
 html {
@@ -55,9 +55,20 @@ input, select {
 }
 
 button {
-  background-color: var(--theme-color_3);
-  color: #fff;
   display: inline-block;
+  background-color: var(--theme-color_3);
+  color: var(--theme-body-txt);
+  border: 1px solid var(--theme-body-txt);
+  border-radius: 5px ;
+  font-size: calc(var(--fz) * 1.2);
+  padding: 0.5rem 1rem;
+}
+
+button:hover,
+button:active {
+  color: var(--theme-color_3);
+  background-color: var(--theme-body-txt);
+  border: 1px solid var(--theme-color_3);
 }
 
 input[type='submit'] {
@@ -65,4 +76,11 @@ input[type='submit'] {
   color: var(--theme-body-txt);
   border: 1px solid var(--theme-body-txt);
   border-radius: 5px ;
+}
+
+input[type='submit']:hover, 
+input[type='submit']:active {
+    color: var(--theme-color_3);
+    background-color: var(--theme-body-txt);
+    border: 1px solid var(--theme-color_3);
 }

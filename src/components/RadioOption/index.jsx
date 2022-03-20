@@ -1,8 +1,22 @@
-const RadioOption = ({id, name, value, label}) => {
+import './RadioOption.css'
+
+const RadioOption = ({id, name, value, label, disabled, checked, correctAnswer, handleChange}) => {
+    const normalizeText = (textToNormalize) => {
+        return textToNormalize.replaceAll(" ", "_").toLowerCase()
+    }
+
+    const getOptionStyles = () => {
+        if (disabled && correctAnswer === value)
+            return "correct_answer"
+        if (disabled && checked && correctAnswer !== value)
+            return "wrong_answer"
+        return ""
+    }
+
     return (
-        <div>
-            <input type="radio" name={name} value={value} />
-            <label for={id}>{label}</label>
+        <div className={`RadioOption ${getOptionStyles()}`}>
+            <input id={normalizeText(value)} type="radio" name={name} value={value} disabled={disabled} checked={checked} onChange={handleChange} />
+            <label htmlFor={id}>{label}</label>
         </div>
     )
 }
