@@ -26,7 +26,6 @@ function App() {
           <Route path='/quiz/:question?' component={Quiz}></Route>
           <Route path="/summary/:question?/:rest" component={Error404}></Route>
           <Route path='/summary' component={Summary}></Route>
-          <Route path="/summary/:rest" component={Error404}></Route>
           <Route path="/:rest" component={Error404}></Route>
         </main>
         <footer><Footer/></footer>
