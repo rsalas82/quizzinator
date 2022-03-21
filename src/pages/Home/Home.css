@@ -1,12 +1,3 @@
-.Home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 3rem;
-    gap: 2rem
-}
-
 .Home > p {
     font-size: 1.2rem;
     text-align: justify;
@@ -28,8 +19,8 @@
 .Home > .Home_form input[type='text'] {
     border: 1px solid var(--theme-body-txt);
     border-radius: 5px;
-    font-size: 1.6rem;
-    width: 40vw;
+    font-size: 1.5rem;
+    width: 50vw;
 }
 
 .Home > .Home_form input[type='submit'] {

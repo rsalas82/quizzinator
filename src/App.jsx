@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Quiz from './components/Quiz'
 import { Route } from 'wouter'
 import Home from './pages/Home'
+import Quiz from './pages/Quiz'
+import Summary from './pages/Summary'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import QuizContext from './context/UserContext'
 import './App.css'
-import Summary from './pages/Summary'
-
+import Error404 from './pages/Error404'
 
 function App() {
 
@@ -24,7 +24,10 @@ function App() {
         <main>
           <Route path='/' component={Home}></Route>
           <Route path='/quiz/:question?' component={Quiz}></Route>
+          <Route path="/summary/:question?/:rest" component={Error404}></Route>
           <Route path='/summary' component={Summary}></Route>
+          <Route path="/summary/:rest" component={Error404}></Route>
+          <Route path="/:rest" component={Error404}></Route>
         </main>
         <footer><Footer/></footer>
       </div>

@@ -1,10 +1,17 @@
 import { useContext } from 'react'
+import { useLocation } from 'wouter'
+import Container from '../../components/Container'
 import UserContext from '../../context/UserContext'
 import './Summary.css'
 
 const Summary = () => {
-
     const {user, quiz} = useContext(UserContext)
+    const [location, setLocation] = useLocation()
+
+    if (!quiz) {
+        setLocation('/')
+        return
+    }
 
     const percentage = quiz.correctQuestions / quiz.questions.length * 100;
 
@@ -17,7 +24,7 @@ const Summary = () => {
     }
 
     return (
-        <div className='Summary'>
+        <Container className='Summary'>
             <h2>Summary of {user}</h2>
             <div className='Summary_grid'>
                 <strong>Total correct answers</strong>
@@ -27,7 +34,7 @@ const Summary = () => {
                 <strong>Percentage correctness</strong>
                 <div className={getStyleByPercentage(percentage)}>{percentage}%</div>
             </div>
-        </div>
+        </Container>
     )
 }
 
