@@ -2,11 +2,7 @@
     font-size: 1.2rem;
     text-align: justify;
     padding: 2rem 3rem 0rem;
-}
-
-.Home > p > strong {
-    color: var(--theme-color_3);
-}
+}   
 
 .Home > .Home_form > form{
     display: flex;
@@ -20,7 +16,7 @@
     border: 1px solid var(--theme-body-txt);
     border-radius: 5px;
     font-size: 1.5rem;
-    width: 50vw;
+    width: 40vw;
 }
 
 .Home > .Home_form input[type='submit'] {

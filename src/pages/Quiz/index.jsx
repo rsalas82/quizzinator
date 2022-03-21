@@ -68,9 +68,12 @@ const Quiz = () => {
 
     return (
         <Container className='Quiz'>
-            <div>
-                Hi <strong>{user}</strong>
-            </div>
+            <p>
+                Hi <strong>{user}</strong>. 
+                You must answer this <strong>ten questions</strong> in order.
+                When you click the 'Save' button, I'll show you the correct answer and I'll mark in the progress bar.
+                At the end of the quiz, I'll show your results. Good luck!
+            </p>
             
             {(!quiz || !question) && <Spinner />}
             
@@ -88,17 +91,17 @@ const Quiz = () => {
                         checked={answer}
                         handleChange={handleChangeQuestion} />
                     
-                    {!question.isSaved && (
-                        <button onClick={handleSave}>Save</button>
-                    )}
-                    
-                    {question.isSaved && (quiz.currentQuestion < quiz.questions.length) && (
-                        <button onClick={handleNext}>Next</button>
-                    )}
-
-                    {question.isSaved && (quiz.questions.length === quiz.currentQuestion) && (
-                        <button onClick={handleSummary}>View Results</button>
-                    )}
+                    <div className='buttons'>
+                        <button className={!question.isSaved && (quiz.currentQuestion < quiz.questions.length) ? "disabled" : ""}
+                            disabled={!question.isSaved && (quiz.currentQuestion < quiz.questions.length)} 
+                            onClick={handleNext}>Next</button>
+                        <button className={question.isSaved ? "disabled" : ""} 
+                            disabled={question.isSaved} 
+                            onClick={handleSave}>Save</button>
+                        {question.isSaved && (quiz.questions.length === quiz.currentQuestion) && (
+                            <button onClick={handleSummary}>View Results</button>
+                        )}
+                    </div>
                 </>
                 )}
         </Container>

@@ -64,6 +64,14 @@ button {
   padding: 0.5rem 1rem;
 }
 
+button.disabled,
+button.disabled:hover {
+  background-color: #b5b3b3;
+  border: 1px solid var(--theme-body-txt);
+  color: #000;
+  opacity: .2;
+}
+
 button:hover,
 button:active {
   color: var(--theme-color_3);
@@ -83,4 +91,12 @@ input[type='submit']:active {
     color: var(--theme-color_3);
     background-color: var(--theme-body-txt);
     border: 1px solid var(--theme-color_3);
+}
+
+p {
+  text-align: justify;
+}
+
+p > strong {
+  color: var(--theme-color_3);
 }
