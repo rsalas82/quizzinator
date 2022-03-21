@@ -1,10 +1,11 @@
 import { useEffect, useState, useContext } from 'react'
-import { getQuiz } from '../../services/getQuiz'
-import Question from '../Question'
-import UserContext from '../../context/UserContext'
-import Spinner from '../Spinner'
-import QuizProgress from '../QuizProgress'
 import { useLocation } from 'wouter'
+import { getQuiz } from '../../services/getQuiz'
+import Question from '../../components/Question'
+import UserContext from '../../context/UserContext'
+import Spinner from '../../components/Spinner'
+import QuizProgress from '../../components/QuizProgress'
+import Container from '../../components/Container'
 import './Quiz.css'
 
 const Quiz = () => {
@@ -12,7 +13,6 @@ const Quiz = () => {
     const [location, setLocation] = useLocation()
     const [question, setQuestion] = useState(null)
     const [answer, setAnswer] = useState()
-    const [valueChecked, setValueChecked] = useState()
 
     useEffect(() => {
         if (!quiz) {
@@ -52,21 +52,22 @@ const Quiz = () => {
 
     const updateQuiz = () => {
         let questions = quiz.questions;
+        const isCorrect = answer.value === question.correctAnswer;
         questions[quiz.currentQuestion-1] = {
             ...question,
             isSaved: true,
-            isCorrect: answer.value === question.correctAnswer
+            isCorrect: isCorrect
         };
         setQuiz({
             ...quiz,
-            errorQuestions: !question.isCorrect ? quiz.errorQuestions+1 : quiz.errorQuestions,
-            correctQuestions: question.isCorrect ? quiz.correctQuestions+1 : quiz.correctQuestions,
+            errorQuestions: !isCorrect ? quiz.errorQuestions+1 : quiz.errorQuestions,
+            correctQuestions: isCorrect ? quiz.correctQuestions+1 : quiz.correctQuestions,
             questions: [...questions]
         })
     }
 
     return (
-        <div className='Quiz'>
+        <Container className='Quiz'>
             <div>
                 Hi <strong>{user}</strong>
             </div>
@@ -100,7 +101,7 @@ const Quiz = () => {
                     )}
                 </>
                 )}
-        </div>
+        </Container>
     )
 }
 

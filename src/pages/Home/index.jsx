@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react'
 import { useLocation } from "wouter"
+import Container from '../../components/Container'
 import QuizContext from '../../context/UserContext'
 import './Home.css'
 
@@ -16,11 +17,11 @@ const Home = () => {
         if (quiz) {
             setLocation(`/quiz/${quiz.currentQuestion}`)
         }
-        return setLocation(`/quiz/1`)
+        setLocation("/quiz/1")
     }
 
     return (
-        <div className='Home'>
+        <Container className='Home'>
             <p>
                 Welcome "human being", this is a test to save the world as you have known by now.
                 You must to response <strong>TEN questions</strong> about anything.
@@ -32,7 +33,7 @@ const Home = () => {
                     <input type="submit" value="Start quiz!" />
                 </form>
             </div>
-        </div>
+        </Container>
     )
 }
 

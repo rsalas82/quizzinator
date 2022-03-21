@@ -16,7 +16,7 @@ const RadioOption = ({id, name, value, label, disabled, checked, correctAnswer, 
     return (
         <div className={`RadioOption ${getOptionStyles()}`}>
             <input id={normalizeText(value)} type="radio" name={name} value={value} disabled={disabled} checked={checked} onChange={handleChange} />
-            <label htmlFor={id}>{label}</label>
+            <label htmlFor={normalizeText(value)}>{label}</label>
         </div>
     )
 }
