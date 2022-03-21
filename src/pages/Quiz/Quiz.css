@@ -8,3 +8,7 @@
     flex: 1 auto;
     flex-wrap: wrap;
 }
+
+.buttons > *{
+    margin-right: 2rem;
+}
