@@ -54,8 +54,18 @@ input, select {
   display: inline-block;
 }
 
+.buttons {
+  display: flex;
+}
+
+.buttons > *{
+  margin-right: 2rem;
+}
+
 button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   background-color: var(--theme-color_3);
   color: var(--theme-body-txt);
   border: 1px solid var(--theme-body-txt);

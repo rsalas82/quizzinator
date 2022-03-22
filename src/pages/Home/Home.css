@@ -2,12 +2,17 @@
     font-size: 1.2rem;
     text-align: justify;
     padding: 2rem 3rem 0rem;
-}   
+}
 
-.Home > .Home_form > form{
+.Home > .Home_form {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    align-items: center;
+    width: 80%;
+}
+
+.Home > .Home_form > form {
+    display: flex;
     flex: 1 1 auto;
     gap: 1rem;
 }
@@ -16,11 +21,14 @@
     border: 1px solid var(--theme-body-txt);
     border-radius: 5px;
     font-size: 1.5rem;
-    width: 40vw;
 }
 
-.Home > .Home_form input[type='submit'] {
-    align-self: center;
-    font-size: 1.8rem;
+.Home .buttons {
+    justify-content: center;
 }
 
+@media only screen and (max-width : 768px) {
+    .Home > .Home_form > form {
+        flex-direction: column;
+    }
+}

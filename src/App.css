@@ -29,15 +29,12 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin: 0 10vw;
 }
 
 .wrapper > footer {
   background-color: var(--theme-color_5);
   color: var(--theme-body-txt);
-  flex-grow: auto;
-  display: flex;
   justify-content: flex-end;
   padding: .5rem 1rem .5rem 0;
-  font-size: .6rem;
+  font-size: calc(var(--fz) * 0.8);
 }
