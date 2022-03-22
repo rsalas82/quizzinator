@@ -45,7 +45,6 @@ Durante el desarrollo se han hecho uso de los siguientes patrones de diseño:
 
 * Hacerlo visualmente atractivo.
 * Añadir mas testing, tanto pruebas unitarias como pruebas de integración.
-* Controlar de encoding.
 * Crear custom hooks para gestionar el uso del contexto y la gestión del cuestionario.
 * Evitar que se pueda acceder a rutas que no existen.
 * Opción de volver atrás para revisar las preguntas y respuestas anteriores.
