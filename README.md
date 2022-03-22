@@ -24,8 +24,8 @@ Ejecutar el comando *npm run test* para lanzar test en consola o *npm run test:u
 
 ## Notas sobre el desarrollo
 
-*The Quizzinator* es una single page application que ha sido desarrollada en React, utilizando la herramienta de empaquetamiento ViteJS.
-Para ello, se han implementado distintos componentes funcionales, gestionando el estado y el ciclo de vida de cada uno mediante el uso de los hooks *useState* y *useEffect*.
+*The Quizzinator* es una single page application que ha sido desarrollada en React, utilizando la herramienta de empaquetado ViteJS.
+Para ello, se han implementado distintos componentes funcionales, gestionando el estado y el ciclo de vida de cada uno mediante el uso de los hooks *useState* y *useEffect*, y el estado global de la aplicación con *useContext*.
 
 La aplicación está compuesta por 3 páginas principales:
 1. *Home:* Pantalla de bienvenida donde se solicita al usuario un nombre mediante un formulario.
