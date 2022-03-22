@@ -9,9 +9,5 @@ export const getQuiz = async(number_questions) => {
     }).catch(err => {
         console.error(`${err.message}. The service is not available.`)
         return quizResponseAdapter(mockResponse.results)
-        // return {
-        //     error: 404,
-        //     message: "The service is not available"
-        // }
     })
 }

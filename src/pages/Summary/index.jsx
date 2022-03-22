@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { useLocation } from 'wouter'
 import Container from '../../components/Container'
 import UserContext from '../../context/UserContext'
@@ -8,12 +8,17 @@ const Summary = () => {
     const {user, quiz} = useContext(UserContext)
     const [location, setLocation] = useLocation()
 
-    if (!quiz) {
-        setLocation('/')
-        return
-    }
-
-    const percentage = quiz.correctQuestions / quiz.questions.length * 100;
+    let percentage = 0;
+    useEffect(() => {
+        if (!quiz) {
+            setLocation('/')
+        }
+        if (quiz) {
+            percentage = quiz.correctQuestions / quiz.questions.length * 100;
+        }
+        
+    }, [])
+    
 
     const getStyleByPercentage = (percentage) => {
         if (percentage < 60)
@@ -24,17 +29,21 @@ const Summary = () => {
     }
 
     return (
-        <Container className='Summary'>
-            <h2>Summary of {user}</h2>
-            <div className='Summary_grid'>
-                <strong>Total correct answers</strong>
-                <div>{quiz.correctQuestions}</div>
-                <strong>Total wrong answers</strong>
-                <div>{quiz.errorQuestions}</div>
-                <strong>Percentage correctness</strong>
-                <div className={getStyleByPercentage(percentage)}>{percentage}%</div>
-            </div>
-        </Container>
+        <>
+        {quiz && (
+            <Container className='Summary'>
+                <h2>Summary of {user}</h2>
+                <div className='Summary_grid'>
+                    <strong>Total correct answers</strong>
+                    <div>{quiz.correctQuestions}</div>
+                    <strong>Total wrong answers</strong>
+                    <div>{quiz.errorQuestions}</div>
+                    <strong>Percentage correctness</strong>
+                    <div className={getStyleByPercentage(percentage)}>{percentage}%</div>
+                </div>
+            </Container>
+        )}
+        </>
     )
 }
 
