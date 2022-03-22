@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import QuizContext from './context/UserContext'
 import './App.css'
 import Error404 from './pages/Error404'
+import { Switch } from 'wouter'
 
 function App() {
 
@@ -22,9 +23,12 @@ function App() {
           <Header/>
         </header>
         <main>
-          <Route path='/' component={Home}></Route>
-          <Route path='/quiz/:question?' component={Quiz}></Route>
-          <Route path='/summary' component={Summary}></Route>
+          <Switch>
+            <Route path='/' component={Home}></Route>
+            <Route path='/quiz/:question?' component={Quiz}></Route>
+            <Route path='/summary' component={Summary}></Route>
+            <Route component={Error404} />
+          </Switch>
         </main>
         <footer><Footer/></footer>
       </div>
