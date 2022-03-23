@@ -6,6 +6,8 @@ Aplicación de questionario, estilo trivial, donde el usuario debe introducir un
 de las cuales se van recogiendo los errores y aciertos sobre las mismas. El usuario solo dispone de una oportunidad para responder cada pregunta. 
 Una vez finalizadas las 10 preguntas, se muestrará en pantalla un resumen con las preguntas acertadas, las falladas y el porcentaje de aciertos.
 
+Puedes probar la aplicación en https://dashing-kelpie-381b0b.netlify.app/
+
 ## Requisitos
 
 * Node 16.x o superior.
