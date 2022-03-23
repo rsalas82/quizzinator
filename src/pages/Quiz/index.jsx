@@ -56,6 +56,7 @@ const Quiz = () => {
 
     const updateQuiz = () => {
         let questions = quiz.questions;
+        console.log
         const isCorrect = answer.value === question.correctAnswer;
         questions[quiz.currentQuestion-1] = {
             ...question,

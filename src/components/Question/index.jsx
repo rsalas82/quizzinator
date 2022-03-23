@@ -15,7 +15,7 @@ const Question = ({id, question, correctAnswer, options, disabled, checked, hand
                     return <RadioOption 
                                 key={`radio_option_${index}`} 
                                 name={`question_${id}`} 
-                                value={decodeString(answer)} 
+                                value={answer} 
                                 label={decodeString(answer)}
                                 correctAnswer={correctAnswer}
                                 disabled={disabled}

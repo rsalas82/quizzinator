@@ -2,7 +2,7 @@ import './RadioOption.css'
 
 const RadioOption = ({id, name, value, label, disabled, checked, correctAnswer, handleChange}) => {
     const normalizeText = (textToNormalize) => {
-        return textToNormalize.replaceAll(" ", "_").toLowerCase()
+        return textToNormalize.replaceAll(" ", "_").replaceAll("'", "_").toLowerCase()
     }
 
     const getOptionStyles = () => {
