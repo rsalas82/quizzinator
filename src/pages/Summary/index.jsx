@@ -6,6 +6,7 @@ import CorrectIcon from './../../assets/correct.svg?component'
 import WrongIcon from './../../assets/wrong.svg?component'
 import TrophyIcon from './../../assets/trophy.svg?component'
 import './Summary.css'
+import SummaryQuote from '../../components/SummaryQuote'
 
 const Summary = () => {
     const {user, quiz} = useContext(UserContext)
@@ -50,19 +51,7 @@ const Summary = () => {
                     </div>
                     <div className={getStyleByPercentage(percentage)}>{percentage}%</div>
                 </div>
-                <div className='summaryQuote'>
-                    {percentage < 60 && (
-                        <p>Ha Ha Ha! I'll destroy the whole planet because of you! </p>
-                    )}
-                    
-                    {percentage >= 60 && percentage < 80 && (
-                        <p>I have to think about this results. Maybe you have saved the world... or maybe not! </p>
-                    )}
-
-                    {percentage >=80 && (
-                        <p>Well done! You have saved the world... by now! </p>
-                    )}
-                </div>
+                <SummaryQuote percentage={percentage}/>
             </Container>
         )}
         </>
