@@ -7,7 +7,8 @@
     
     padding: 2rem;
     border-radius: 5px;
-    background-color: var(--theme-color_1);
+    background: rgb(23,23,45);
+    background: linear-gradient(54deg, rgba(23,23,45,1) 0%, rgba(49,50,170,1) 100%);
 }
 
 .Question_question {

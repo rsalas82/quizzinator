@@ -43,10 +43,12 @@ Durante el desarrollo se han hecho uso de los siguientes patrones de diseño:
 
 ## Puntos a mejorar
 
-* Diseño, hacer que sea más atractivo para el usuario.
+* Diseño: hacer que sea más atractivo para el usuario.
 * Resumen de preguntas y respuestas más detallado.
 * Testing, tanto pruebas unitarias como pruebas de integración.
+* Añadir otros tipos de respuestas (texto, select).
 * Uso de custom hooks para gestionar el contexto y el cuestionario.
 * Añadir navegación hacia atrás para revisar las preguntas y respuestas anteriores.
 * Accesibilidad.
 * Responsive.
+* Utilizar styled-components o CSS modules

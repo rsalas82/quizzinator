@@ -19,7 +19,7 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: content-box;
 }
 
 body {
@@ -87,6 +87,7 @@ button:active {
   color: var(--theme-color_3);
   background-color: var(--theme-body-txt);
   border: 1px solid var(--theme-color_3);
+  transition: ease .3s;
 }
 
 input[type='submit'] {

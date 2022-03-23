@@ -7,7 +7,7 @@ const Question = ({id, question, correctAnswer, options, disabled, checked, hand
     return (
         <div className="Question">
             <div className="Question_question">
-                <p>{`Question ${id+1}:`}</p>
+                <p><strong>{`Question ${id+1}:`}</strong></p>
                 <p>{`${decodeString(question)}`}</p>
             </div>
             <div className="Question_answers">
