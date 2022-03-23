@@ -30,7 +30,10 @@ const Home = () => {
             </p>
             <div className='Home_form'>
                 <form onSubmit={handleSubmit}>
-                    <input placeholder="What's your name?" type="text" onChange={handleChange} />
+                    <label htmlFor="username">
+                        What's your name?
+                    </label>
+                    <input id="username" type="text" onChange={handleChange} />
                     <div className='buttons'>
                         <button type="submit">
                             <svg width="24" height="24" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

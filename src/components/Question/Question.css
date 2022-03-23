@@ -4,6 +4,10 @@
     gap: 1rem;
     align-items: flex-start;
     text-align: left;
+    
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: var(--theme-color_1);
 }
 
 .Question_question {
