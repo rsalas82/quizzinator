@@ -1,8 +1,9 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import { useLocation } from "wouter"
 import Container from '../../components/Container'
 import QuizContext from '../../context/UserContext'
 import { NUMBER_OF_QUESTIONS } from '../../utilities/constants.utility'
+import StartIcon from './../../assets/start.svg?component'
 import './Home.css'
 
 const Home = () => {
@@ -36,16 +37,7 @@ const Home = () => {
                     <input id="username" type="text" onChange={handleChange} />
                     <div className='buttons'>
                         <button type="submit">
-                            <svg width="24" height="24" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2V6" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M12 18V22" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M22 12H18" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M6 12H2" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M4.92896 4.92896L7.75738 7.75738" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M16.2427 16.2427L19.0711 19.0711" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M19.071 4.92896L16.2426 7.75738" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
-                                <path d="M7.75732 16.2427L4.9289 19.0711" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
+                            <StartIcon />
                             Start quiz!
                         </button>
                     </div>

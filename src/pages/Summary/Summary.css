@@ -42,13 +42,13 @@
 }
 
 .death {
-    color: crimson;
+    background-color: crimson;
 }
 
 .retry {
-    color: darkorange;
+    background-color: darkorange;
 }
 
 .live {
-    color: forestgreen;
+    background-color: forestgreen;
 }
