@@ -53,7 +53,7 @@ const Summary = () => {
                             <path d="M6.74527 4.00001C6.74527 4.00001 5.78547 3.00614 4.99995 3.00001C3.49995 2.9883 3.22264 4.00001 3.22264 4.00001C2.92908 4.60953 2.69424 6.19429 4.1033 7.65715C5.51235 9.12001 7.14823 10.4 7.79004 10.8572" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
                             <path d="M8.50662 20C8.50662 18.1714 12.0292 17.2571 12.0292 17.2571C12.0292 17.2571 15.5519 18.1714 15.5519 20H8.50662Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
-                        <strong>Percentage correctness</strong>
+                        <strong>Worthiness</strong>
                     </div>
                     <div className={getStyleByPercentage(percentage)}>{percentage}%</div>
                 </div>

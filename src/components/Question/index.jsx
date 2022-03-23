@@ -7,7 +7,8 @@ const Question = ({id, question, correctAnswer, options, disabled, checked, hand
     return (
         <div className="Question">
             <div className="Question_question">
-                <p>{decodeString(question)}</p>
+                <p>{`Question ${id+1}:`}</p>
+                <p>{`${decodeString(question)}`}</p>
             </div>
             <div className="Question_answers">
                 {options.map((answer, index) => {
